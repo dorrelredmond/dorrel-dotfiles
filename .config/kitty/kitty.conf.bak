@@ -87,7 +87,7 @@ font_size 18.0
 #: implemented using the calt OpenType feature. For disabling general
 #: ligatures, use the font_features option.
 
-font_features +cv02 +cv05 +cv09 +cv14 +ss04 +cv16 +cv31 +cv25 +cv26 +cv32 +cv28 +ss10 +zero +onum
+# font_features
 
 #: E.g. font_features none
 
@@ -3272,7 +3272,7 @@ include current-theme.conf
 
 
 # BEGIN_KITTY_FONTS
-font_family      family="Fira Code"
+font_family      family='FantasqueSansM Nerd Font Mono' postscript_name=FantasqueSansMNFM-Regular
 bold_font        auto
 italic_font      auto
 bold_italic_font auto
