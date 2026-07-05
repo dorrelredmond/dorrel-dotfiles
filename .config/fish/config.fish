@@ -11,6 +11,9 @@ set -g theme_nerd_fonts yes
 set -g theme_newline_cursor yes
 fish_config theme choose catppuccin-mocha
 
+## PATH Additions
+fish_add_path ~/.spicetify
+
 ## Abbreviations
 
 # Cargo Abbreviations
