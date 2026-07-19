@@ -91,13 +91,16 @@
         rows: [
             (
                 left: [
+                    (kind: Text("Vol: "), style: (fg: "#b7bdf8", modifiers: "Bold")),
+                    (kind: Property(Status(Volume)), style: (fg: "#b7bdf8", modifiers: "Bold")),
+                    (kind: Text("% "), style: (fg: "#b7bdf8", modifiers: "Bold")),
                     (kind: Text("["), style: (fg: "#b7bdf8", modifiers: "Bold")),
                     (kind: Property(Status(StateV2(playing_label: "", paused_label: "", stopped_label: ""))), style: (fg: "#b7bdf8", modifiers: "Bold")),
                     (kind: Text("]"), style: (fg: "#b7bdf8", modifiers: "Bold")),
                     (kind: Text(" ")),
                     (kind: Property(Status(Elapsed))),
                     (kind: Text(" / ")),
-                    (kind: Property(Status(Duration))),
+                    (kind: Property(Status(Duration))), 
                 ],
                 center: [
                     (kind: Property(Song(Artist)), style: (fg: "#eed49f", modifiers: "Bold"),
