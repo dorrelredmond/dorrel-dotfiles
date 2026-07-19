@@ -227,7 +227,7 @@
         ),
         smoothing: (
             noise_reduction: 77, // default 77
-            monstercat: false, // default false
+            monstercat: true, // default false
             waves: false, // default false
         ),
         // this is a list of floating point numbers thats directly passed to cava
