@@ -1,2 +1,5 @@
 [Default Applications]
 image/jpeg=imv.desktop
+image/png=imv.desktop
+application/pdf=okularApplication_pdf.desktop
+image/webp=imv.desktop
