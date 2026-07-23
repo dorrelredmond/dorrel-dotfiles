@@ -11,7 +11,7 @@
     volume_step: 5,
     max_fps: 30,
     scrolloff: 0,
-    wrap_navigation: false,
+    wrap_navigation: true,
     enable_mouse: true,
     enable_focus_events: true,
     scroll_amount: 1,
