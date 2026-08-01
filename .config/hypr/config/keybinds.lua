@@ -1,5 +1,6 @@
 -- Define Variables
 local menu = "pkill rofi || true && rofi -show drun -modi drun,filebrowser,run,window"
+local fn   = require("utils.functions")
 
 -- Close Active Apps
 hl.bind("SUPER + Q", hl.dsp.window.close())
@@ -89,6 +90,13 @@ for i = 1, 10 do
     hl.bind("SUPER + " .. key,             hl.dsp.focus({ workspace = i}))
     hl.bind("SUPER + SHIFT + " .. key,     hl.dsp.window.move({ workspace = i }))
 end
+
+-- Special workspace toggles
+hl.bind("SUPER + CTRL +  S", fn.toggle("specialws"))
+hl.bind("CTRL + SHIFT + Escape", fn.toggle("sysmon"))
+hl.bind("SUPER + CTRL + M", fn.toggle("music"))
+hl.bind("SUPER + CTRL + D", fn.toggle("communication"))
+hl.bind("SUPER + CTRL + R", fn.toggle("todo"))
 
 -- Volume Control
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"), { locked = true, repeating = true })

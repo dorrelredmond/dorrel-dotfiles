@@ -101,6 +101,12 @@ local function default_config()
             whatsapp = { enable = true, match = { { class = "whatsapp" } }, move = true },
         },
         music = {
+            rmpc = {
+                enable  = false,
+                match   = { { class = "rmpc", title = "rmpc", workspace = { name = "special:music" } } },
+                command = { "kitty", "-e", "rmpc" },
+                move    = true,
+            },
             spotify = {
                 enable  = true,
                 match   = { { class = "Spotify" }, { initial_title = "Spotify" }, { initial_title = "Spotify Free" } },
@@ -113,7 +119,7 @@ local function default_config()
             btop = {
                 enable  = true,
                 match   = { { class = "btop", title = "btop", workspace = { name = "special:sysmon" } } },
-                command = { "foot", "-a", "btop", "-T", "btop", "fish", "-C", "exec btop" },
+                command = { "kitty", "-e", "btop"},
             },
         },
         todo = {
