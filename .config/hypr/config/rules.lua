@@ -222,8 +222,8 @@ create_tag(todo_app_tag, { workspace = "special:todo" })
 ---- Workspace rules ----
 -------------------------
 
-hl.workspace_rule({ workspace = "w[tv1]s[false]", gaps_out = 15 })
-hl.workspace_rule({ workspace = "f[1]s[false]", gaps_out = 15 })
+--hl.workspace_rule({ workspace = "w[tv1]s[false]", gaps_out = 15 })
+--hl.workspace_rule({ workspace = "f[1]s[false]", gaps_out = 15 })
 
 -- Workspace to monitor rules
 hl.workspace_rule({ workspace = "1",  monitor = "HDMI-A-1", default = true, persistent = true })
