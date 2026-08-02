@@ -36,7 +36,7 @@ hl.bind("SUPER + SPACE", hl.dsp.exec_cmd(menu)) -- Main Menu (APP Launcher)
 hl.bind("SUPER + semicolon", hl.dsp.exec_cmd("rofimoji")) -- Emote Menu
 hl.bind("SUPER + CTRL + E", hl.dsp.exec_cmd("rofimoji")) -- Emote Menu
 hl.bind("SUPER + CTRL + V", hl.dsp.exec_cmd("cliphist list | rofi -dmenu -theme config-clipboard.rasi | cliphist decode | wl-copy")) -- Clipboard History
-hl.bind("SUPER + CTRL + S", hl.dsp.exec_cmd("WINDOW=true rofi -show window"))  -- List and Switch Running Applications
+hl.bind("SUPER + CTRL + A", hl.dsp.exec_cmd("WINDOW=true rofi -show window"))  -- List and Switch Running Applications
 hl.bind("SUPER + CTRL + W", hl.dsp.exec_cmd("rofi -theme config-wallpaper.rasi -show filebrowser -filebrowser-command 'awww img --transition-type any --transition-pos top-right' -filebrowser-directory ~/Pictures/wallpapers/ -- Wallpaper Picker"))
 
 hl.bind("SUPER + R", hl.dsp.exec_cmd(menu))
