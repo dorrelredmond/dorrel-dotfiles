@@ -68,16 +68,16 @@ hl.bind("SUPER + SHIFT + K", hl.dsp.window.swap({ direction = "up" }))
 hl.bind("SUPER + SHIFT + J", hl.dsp.window.swap({ direction = "down" }))
 
 -- Window Resizing
-hl.bind("SUPER + CTRL + left",  hl.dsp.window.resize({ x = -60, y = 0 }))
-hl.bind("SUPER + CTRL + right", hl.dsp.window.resize({ x = 60, y = 0 }))
-hl.bind("SUPER + CTRL + up",    hl.dsp.window.resize({ x = 0, y = -60 }))
-hl.bind("SUPER + CTRL + down",  hl.dsp.window.resize({ x = 0, y = 60 }))
+hl.bind("SUPER + CTRL + left",  hl.dsp.window.resize({ x = -50, y = 0, relative = true }), { repeating = true })
+hl.bind("SUPER + CTRL + right", hl.dsp.window.resize({ x = 50, y = 0, relative = true }), { repeating = true })
+hl.bind("SUPER + CTRL + up",    hl.dsp.window.resize({ x = 0, y = -50, relative = true }), { repeating = true })
+hl.bind("SUPER + CTRL + down",  hl.dsp.window.resize({ x = 0, y = 50, relative = true }), { repeating = true })
 
 -- Window Resizing with VIM Keys
-hl.bind("SUPER + CTRL + H", hl.dsp.window.resize({ x = -60, y = 0 }))
-hl.bind("SUPER + CTRL + L", hl.dsp.window.resize({ x = 60, y = 0 }))
-hl.bind("SUPER + CTRL + K", hl.dsp.window.resize({ x = 0, y = -60 }))
-hl.bind("SUPER + CTRL + J", hl.dsp.window.resize({ x = 0, y = 60 }))
+hl.bind("SUPER + CTRL + H", hl.dsp.window.resize({ x = -50, y = 0, relative = true }), { repeating = true })
+hl.bind("SUPER + CTRL + L", hl.dsp.window.resize({ x = 50, y = 0, relative = true }), { repeating = true })
+hl.bind("SUPER + CTRL + K", hl.dsp.window.resize({ x = 0, y = -50, relative = true }), { repeating = true })
+hl.bind("SUPER + CTRL + J", hl.dsp.window.resize({ x = 0, y = 50, relative = true }), { repeating = true })
 
 -- Move/resize windows with mainMod + LMB/RMB and dragging
 hl.bind("SUPER + mouse:272", hl.dsp.window.drag(),   { mouse = true })
