@@ -41,7 +41,7 @@ hl.bind("SUPER + CTRL + W", hl.dsp.exec_cmd("rofi -theme config-wallpaper.rasi -
 
 hl.bind("SUPER + R", hl.dsp.exec_cmd(menu))
 hl.bind("SUPER + P", hl.dsp.window.pseudo())
-hl.bind("SUPER + J", hl.dsp.layout("togglesplit"))    -- dwindle only
+hl.bind("SUPER + CTRL + SHIFT + J", hl.dsp.layout("togglesplit"))    -- dwindle only
 
 -- Move focus with mainMod + arrow keys
 hl.bind("SUPER + left",  hl.dsp.focus({ direction = "left" }))
