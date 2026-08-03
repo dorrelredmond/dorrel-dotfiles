@@ -39,10 +39,6 @@ hl.bind("SUPER + CTRL + V", hl.dsp.exec_cmd("cliphist list | rofi -dmenu -theme 
 hl.bind("SUPER + CTRL + A", hl.dsp.exec_cmd("WINDOW=true rofi -show window"))  -- List and Switch Running Applications
 hl.bind("SUPER + CTRL + W", hl.dsp.exec_cmd("rofi -theme config-wallpaper.rasi -show filebrowser -filebrowser-command 'awww img --transition-type any --transition-pos top-right' -filebrowser-directory ~/Pictures/wallpapers/ -- Wallpaper Picker"))
 
-hl.bind("SUPER + R", hl.dsp.exec_cmd(menu))
-hl.bind("SUPER + P", hl.dsp.window.pseudo())
-hl.bind("SUPER + CTRL + SHIFT + J", hl.dsp.layout("togglesplit"))    -- dwindle only
-
 -- Move focus with mainMod + arrow keys
 hl.bind("SUPER + left",  hl.dsp.focus({ direction = "left" }))
 hl.bind("SUPER + right", hl.dsp.focus({ direction = "right" }))
