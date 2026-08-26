@@ -23,21 +23,20 @@ wrap = "yes"
 
 [opener]
 edit = [
-    { run = 'nvim "$@"', desc = "Edit", block = true },
+    { run = 'nvim %s', desc = "Edit", block = true },
 ]
 open = [
-    { run = 'xdg-open "$1"', desc = "Open" },
+    { run = 'xdg-open %s1', orphan = true, desc = "Open" },
 ]
 reveal = [
-    { run = 'xdg-open "$(dirname "$1")"', desc = "Reveal" },
-    { run = '''exiftool "$1"; echo "Press enter to exit"; read _''', block = true, desc = "Show EXIF" },
+    { run = '''exiftool %s1; echo "Press enter to exit"; read _''', block = true, desc = "Show EXIF" },
 ]
 extract = [
-    { run = 'ya pub extract --list "$@"', desc = "Extract here" },
+    { run = 'ya pub extract --list %s', desc = "Extract here" },
 ]
 play = [
-    { run = 'mpv --force-window "$@"', orphan = true, desc = "Play" },
-    { run = '''mediainfo "$1"; echo "Press enter to exit"; read _''', block = true, desc = "Show Media Info" },
+    { run = 'mpv --force-window %s', orphan = true, desc = "Play" },
+    { run = '''mediainfo %s1; echo "Press enter to exit"; read _''', block = true, desc = "Show Media Info" },
 ]
 
 [open]
