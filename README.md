@@ -8,7 +8,7 @@ A curated collection of configuration files for a modern, aesthetic, and product
 
 ### 🖥️ Window Management & UI
 - **Compositor:** [Hyprland](https://hyprland.org/) - A dynamic tiling Wayland compositor.
-- **Status Bar:** [Waybar](https://github.com/ko数列/waybar) - Highly customizable Wayland bar.
+- **Status Bar:** [Waybar](https://github.com/ko数列/waybar) - Highly customizable Wayland bar. *(Note: will eventually be replaced by quickshell)*
 - **Notification Center:** [SwayNC](https://github.com/ErikReider/SwayNC) - A customizable notification center.
 - **Application Launcher:** [Rofi](https://github.com/davatorium/rofi) - Window switcher, application launcher and dmenu replacement.
 - **UI Theming:** [Kvantum](https://github.com/Kvantum/Kvantum) & `qt5ct`/`qt6ct` for consistent Qt application styling.
