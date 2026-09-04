@@ -13,6 +13,7 @@ fish_config theme choose catppuccin-mocha
 
 ## PATH Additions
 fish_add_path ~/.spicetify
+fish_add_path -m ~/.local/bin
 
 ## Abbreviations
 
@@ -49,3 +50,4 @@ abbr -a -- chwall2 'awww img --transition-type any --transition-pos top-right -o
 
 ## Declare Starhip Prompt
 starship init fish | source
+
