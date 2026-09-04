@@ -24,6 +24,8 @@ hl.on("hyprland.start", function()
 
     -- Misc Apps
     hl.exec_cmd("dropbox")
+    hl.exec_cmd("sh ~/.config/hypr/utils/gdrive.sh")
+    hl.exec_cmd("sh ~/.config/hypr/utils/llama.sh")
 end)
 
 -- Resizer listeners
