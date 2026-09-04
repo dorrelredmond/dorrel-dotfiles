@@ -1,0 +1,24 @@
+[Unit]
+Description=Llama.cpp User Server Service
+After=network.target
+
+[Service]
+Type=simple
+
+# Working directory and execution binary
+WorkingDirectory=/home/dorrel/.local/bin
+ExecStart=/home/dorrel/.local/bin/llama serve \
+    --models-dir /home/dorrel/dev/local-ai-models/ \
+    --host 0.0.0.0 \
+    --port 8080 \
+    -ngl 33
+
+Restart=on-failure
+RestartSec=5s
+
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+# default.target is used instead of multi-user.target for user-level units
+WantedBy=default.target
