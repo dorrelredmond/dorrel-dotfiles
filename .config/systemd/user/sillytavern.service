@@ -1,0 +1,16 @@
+[Unit]
+Description=SillyTavern Web UI
+After=network.target
+
+[Service]
+Type=simple
+# Update the WorkingDirectory to match your actual SillyTavern folder path
+WorkingDirectory=/home/dorrel/dev/SillyTavern-Launcher/SillyTavern/
+# Runs SillyTavern using node directly; %h expands to your home directory
+ExecStart=/home/dorrel/dev/SillyTavern-Launcher/SillyTavern/start.sh
+Restart=on-failure
+RestartSec=5s
+Environment=NODE_ENV=production
+
+[Install]
+WantedBy=default.target

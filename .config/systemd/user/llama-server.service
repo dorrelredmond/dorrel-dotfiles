@@ -11,7 +11,12 @@ ExecStart=/home/dorrel/.local/bin/llama serve \
     --models-dir /home/dorrel/dev/local-ai-models/ \
     --host 0.0.0.0 \
     --port 8080 \
-    -ngl 33
+    --parallel 1 \
+    --cont-batching \
+    --gpu-layers 99 \
+    --ctx-size 8192 \
+    --flash-attn on \
+    -ctk q8_0 -ctv q8_0
 
 Restart=on-failure
 RestartSec=5s
