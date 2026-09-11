@@ -15,6 +15,8 @@ fish_config theme choose catppuccin-mocha
 fish_add_path ~/.spicetify
 fish_add_path -m ~/.local/bin
 
+status --is-interactive; and rbenv init - fish | source
+
 ## Abbreviations
 
 # Cargo Abbreviations
