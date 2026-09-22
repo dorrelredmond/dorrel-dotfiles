@@ -1,0 +1,10 @@
+[Unit]
+Description=Foundry VTT
+
+[Service]
+Type=simple
+ExecStart= /home/dorrel/foundryvtt/foundryvtt/foundryvtt --dataPath=/home/dorrel/foundryvtt/foundrydata/
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
