@@ -1,0 +1,6 @@
+[Unit]
+Description=comfyui
+
+[Service]
+Type=simple
+ExecStart= /home/dorrel/dev/comfyui/run_gpu.sh
