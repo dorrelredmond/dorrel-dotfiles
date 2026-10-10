@@ -4,6 +4,7 @@
     	"all-outputs": false,
 	    "format": "{name}",
 	    "show-special": false,
+      "on-click": "activate",
       "persistent-workspaces":{
         "*": 5,
       }
