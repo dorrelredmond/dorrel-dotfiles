@@ -7,4 +7,4 @@ ExecStart= /home/dorrel/foundryvtt/foundryvtt/foundryvtt --dataPath=/home/dorrel
 Restart=on-failure
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=default.target
