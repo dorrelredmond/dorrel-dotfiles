@@ -3,7 +3,7 @@ Description=Google Drive
 
 [Service]
 Type=simple
-ExecStart= /home/dorrel/.config/hypr/utils/gdrive.sh
+ExecStart= /home/dorrel/dev/user-scripts/gdrive.sh
 Restart=on-failure
 
 [Install]
