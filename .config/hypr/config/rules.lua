@@ -97,6 +97,7 @@ tagged_rule(opaque_tag, {
     "resolve|kdenlive|shotcut",               -- Video editors
     "blender|godot",                          -- 3D editors
     "(steam_app_(default|[0-9]+))|gamescope", -- Games
+    "moe.nyarchlinux.catgirldownloader",      -- Catgirl Downloader
 }, "class")
 
 
