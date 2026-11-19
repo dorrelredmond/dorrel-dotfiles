@@ -1,0 +1,50 @@
+#!/usr/bin/env bash
+
+# Prompt for input and output extensions
+read -rp "Enter input file extension (e.g., mkv, mov, wav): " input_ext
+read -rp "Enter output file extension (e.g., mp4, mp3, flac): " output_ext
+
+# Strip leading dots if the user included them (e.g., ".mp4" -> "mp4")
+input_ext="${input_ext#.}"
+output_ext="${output_ext#.}"
+
+# Validate that neither input is empty
+if [[ -z "$input_ext" || -z "$output_ext" ]]; then
+    echo "Error: Both input and output extensions are required."
+    exit 1
+fi
+
+# Verify ffmpeg is installed
+if ! command -v ffmpeg &> /dev/null; then
+    echo "Error: ffmpeg is not installed or not in your PATH."
+    exit 1
+fi
+
+# Enable nullglob so the loop doesn't run literally if no files match
+shopt -s nullglob
+files=( *."$input_ext" )
+
+if [[ ${#files[@]} -eq 0 ]]; then
+    echo "No .$input_ext files found in $(pwd)."
+    exit 0
+fi
+
+# Create the output directory in the current working directory
+output_dir="./converted"
+mkdir -p "$output_dir"
+
+echo "Found ${#files[@]} file(s). Starting conversion..."
+
+for file in "${files[@]}"; do
+    # Extract filename without extension
+    base_name="${file%.*}"
+    output_file="$output_dir/${base_name}.${output_ext}"
+
+    echo "Converting: $file -> $output_file"
+    
+    # -nostdin prevents ffmpeg from swallowing standard input in loops
+    # -loglevel error keeps terminal output clean
+    ffmpeg -nostdin -i "$file" -loglevel error -stats "$output_file"
+done
+
+echo "Done! All converted files are saved in $output_dir/"

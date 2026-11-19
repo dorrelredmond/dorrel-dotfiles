@@ -1,0 +1,33 @@
+#!/bin/bash
+# batch_compress_pdf.sh
+# Compresses all PDF files in the current directory using Ghostscript.
+# Usage: ./batch_compress_pdf.sh [output_directory]
+
+PRESET="/printer"
+OUTPUT_DIR="${1:-./compressed}"
+
+mkdir -p "$OUTPUT_DIR"
+
+for input_file in ./*.pdf; do
+    [ -f "$input_file" ] || continue
+
+    filename="$(basename "$input_file")"
+    output_file="$OUTPUT_DIR/$filename"
+
+    original_size=$(du -sh "$input_file" | cut -f1)
+
+    gs \
+      -sDEVICE=pdfwrite \
+      -dCompatibilityLevel=1.4 \
+      -dPDFSETTINGS="$PRESET" \
+      -dNOPAUSE \
+      -dQUIET \
+      -dBATCH \
+      -sOutputFile="$output_file" \
+      "$input_file"
+
+    compressed_size=$(du -sh "$output_file" | cut -f1)
+    echo "Compressed: $filename | Before: $original_size | After: $compressed_size"
+done
+
+echo "Done. Compressed files saved to $OUTPUT_DIR"
